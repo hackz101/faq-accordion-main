@@ -47,6 +47,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100svh;
+  overflow-y: scroll;
 }
 
 .card {
