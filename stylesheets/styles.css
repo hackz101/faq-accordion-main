@@ -34,6 +34,7 @@ body {
   background-repeat: repeat-x;
   background-position: top left; 
   background-size: auto;
+  height: 100%;
 }
 
 .background-image {
