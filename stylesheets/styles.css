@@ -46,7 +46,7 @@ body {
 .container {
   display: grid;
   place-items: center;
-  height: 100dvh;
+  min-height: 100svh;
 }
 
 .card {
@@ -127,7 +127,10 @@ section:not(:last-child) {
 }
 
 /*default footer styles*/
-.attribution { font-size: 11px; text-align: center; }
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (max-width: 375px) {
