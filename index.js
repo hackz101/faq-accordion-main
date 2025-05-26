@@ -6,7 +6,6 @@ document.querySelectorAll('section')
     /*handle expand button*/
     expandButton.addEventListener('click', () => {
       const isExpanded = expandButton.classList.contains('js-section-expanded');
-      console.log(isExpanded);
       toggleExpansion(section, index, expandButton, isExpanded);
     });
 
