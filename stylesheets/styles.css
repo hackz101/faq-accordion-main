@@ -1,5 +1,137 @@
+/*configs*/
+@font-face {
+  font-family: "Work Sans";
+  src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
 
+:root {
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-dark-purple: hsl(292, 42%, 14%);
+  --color-desat-purple: hsl(292, 16%, 49%);
+  --color-light-purple: hsl(275, 100%, 97%);
+  --color-violet: hsl(281, 83%, 54%);
+
+  --ff-main: "Work Sans", sans-serif;
+
+  --fs-title: 3.5rem;
+  --fs-faq: 1.125rem;
+  --fs-response: 1rem;
+
+  --fw-title: 700;
+  --fw-faq: 600;
+  --fw-response: 400;
+  box-sizing: border-box;
+}
+
+/*layout styles*/
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-response);
+  font-weight: var(--fw-response);
+  background-color: var(--color-light-purple);
+  background-image: url(/assets/images/background-pattern-desktop.svg);
+  background-repeat: repeat-x;
+  background-position: top left; 
+  background-size: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+  max-width: 34rem;
+  padding: 2.5rem;
+}
+
+/*content styles*/
+header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid var(--color-light-purple);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-title);
+  color: var(--color-dark-purple);
+  margin: 0;
+  line-height: 2.625rem;
+}
+
+.expand-button {
+  width: 2rem;
+  margin-left: 1.5rem ;
+  cursor: pointer;
+}
+
+.response {
+  font-size: var(--fs-response);
+  font-weight: var(--fw-response);
+  color: var(--color-desat-purple);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+}
+
+/*faq styles*/
+.faq-header-group {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.faq-header-group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.faq {
+  font-size: var(--fs-faq);
+  font-weight: var(--fw-faq);
+  outline: none;
+  color: var(--color-dark-purple);
+  margin: 0;
+  line-height: 1.3rem;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.faq:hover {
+  color: var(--color-violet);
+}
+
+.faq:focus {
+  color: var(--color-violet);
+}
 
 /*default footer styles*/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(/assets/images/background-pattern-mobile.svg);
+  }
+}
